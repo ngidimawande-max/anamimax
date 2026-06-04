@@ -1,0 +1,16 @@
+{
+  "name": "anami-edu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A basic educational website with math, English, Zulu, and typing games.",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "test": "node tests/site.test.js"
+  },
+  "keywords": [
+    "education",
+    "games",
+    "static-site"
+  ],
+  "license": "UNLICENSED"
+}
