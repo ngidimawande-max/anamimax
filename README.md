@@ -1,0 +1,2 @@
+# anamimax
+educational platform
