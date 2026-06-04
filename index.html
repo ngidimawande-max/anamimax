@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Anami Edu is a bright beginner learning site with basic math, English, Zulu, and typing games."
+    />
+    <title>Anami Edu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Anami Edu home">Anami Edu</a>
+        <div class="nav-links">
+          <a href="#math">Math</a>
+          <a href="#english">English</a>
+          <a href="#zulu">Zulu</a>
+          <a href="#typing">Typing</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-content">
+        <p class="eyebrow">Play • Learn • Grow</p>
+        <h1>Welcome to Anami Edu</h1>
+        <p>
+          A cheerful learning playground with quick games for basic math,
+          English words, Zulu vocabulary, and typing practice.
+        </p>
+        <a class="button" href="#games">Start learning</a>
+      </section>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <h2 id="intro-title">Little lessons, big confidence</h2>
+        <p>
+          Each activity gives instant feedback and keeps score so learners can
+          practise independently in short, fun sessions.
+        </p>
+      </section>
+
+      <section id="games" class="games-grid" aria-label="Learning games">
+        <article id="math" class="card game-card">
+          <div class="card-icon" aria-hidden="true">➕</div>
+          <h2>Math Mission</h2>
+          <p>Solve addition, subtraction, multiplication, and division problems that get harder as you score points.</p>
+          <div class="question" id="math-question">Loading question...</div>
+          <label for="math-answer">Your answer</label>
+          <div class="answer-row">
+            <input id="math-answer" inputmode="numeric" type="number" />
+            <button type="button" id="math-check">Check</button>
+          </div>
+          <p class="feedback" id="math-feedback" role="status" aria-live="polite"></p>
+          <p class="score">Score: <span id="math-score">0</span> • Level: <span id="math-level">1</span></p>
+        </article>
+
+        <article id="english" class="card game-card">
+          <div class="card-icon" aria-hidden="true">📚</div>
+          <h2>English Builder</h2>
+          <p>Pick the English word that matches the clue. More choices appear as you improve.</p>
+          <div class="question" id="english-clue">Loading clue...</div>
+          <div class="choice-row" id="english-choices"></div>
+          <p class="feedback" id="english-feedback" role="status" aria-live="polite"></p>
+          <p class="score">Score: <span id="english-score">0</span></p>
+        </article>
+
+        <article id="zulu" class="card game-card">
+          <div class="card-icon" aria-hidden="true">🌍</div>
+          <h2>Zulu Words</h2>
+          <p>Learn useful isiZulu words by choosing the English meaning. More choices appear as you improve.</p>
+          <div class="question" id="zulu-word">Loading word...</div>
+          <div class="choice-row" id="zulu-choices"></div>
+          <p class="feedback" id="zulu-feedback" role="status" aria-live="polite"></p>
+          <p class="score">Score: <span id="zulu-score">0</span></p>
+        </article>
+
+        <article id="typing" class="card game-card wide-card">
+          <div class="card-icon" aria-hidden="true">⌨️</div>
+          <h2>Typing Trail</h2>
+          <p>Copy the sentence exactly to practise careful typing.</p>
+          <div class="question typing-prompt" id="typing-prompt">Loading sentence...</div>
+          <label for="typing-input">Type here</label>
+          <textarea id="typing-input" rows="3" spellcheck="false"></textarea>
+          <div class="answer-row">
+            <button type="button" id="typing-check">Check typing</button>
+            <button type="button" id="typing-next" class="secondary">New sentence</button>
+          </div>
+          <p class="feedback" id="typing-feedback" role="status" aria-live="polite"></p>
+          <p class="score">Completed: <span id="typing-score">0</span></p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made with love for curious learners. Keep practising every day!</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
