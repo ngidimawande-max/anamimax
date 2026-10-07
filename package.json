@@ -1,16 +1,16 @@
 {
-  "name": "anami-edu",
+  "name": "northstar-portfolio-dashboard",
   "version": "1.0.0",
   "private": true,
-  "description": "A basic educational website with math, English, Zulu, and typing games.",
+  "description": "A responsive portfolio-transparency dashboard for wealth clients and advisers.",
   "scripts": {
     "start": "python3 -m http.server 4173",
     "test": "node tests/site.test.js"
   },
   "keywords": [
-    "education",
-    "games",
-    "static-site"
+    "wealth-management",
+    "portfolio",
+    "dashboard"
   ],
   "license": "UNLICENSED"
 }
