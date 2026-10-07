@@ -1,12 +1,9 @@
-# Anami Edu
+# Northstar Portfolio Dashboard
 
-Anami Edu is a very basic static educational website for children. It includes
-small browser games for:
-
-- Basic addition practice
-- English word recognition
-- Zulu vocabulary matching
-- Typing practice
+Northstar is a responsive portfolio-transparency dashboard for wealth clients,
+brokers, partners, and company leadership. The prototype includes a consolidated
+client overview, performance and allocation visualisations, investment account
+detail, portfolio insights, role switching, and an editable portfolio value.
 
 ## Preview locally
 
@@ -24,15 +21,5 @@ npm test
 
 ## Launch with GitHub Pages
 
-This repository includes a GitHub Actions workflow at
-`.github/workflows/pages.yml` that tests the site on pull requests and deploys it
-to GitHub Pages after changes are pushed to the `main` branch.
-
-To launch it:
-
-1. Push the repository to GitHub.
-2. Open the repository settings in GitHub.
-3. Go to **Pages**.
-4. Set the source to **GitHub Actions**.
-5. Push to `main` and wait for the **Test and deploy Anami Edu** workflow to
-   finish.
+The workflow in `.github/workflows/pages.yml` tests the site on pull requests and
+deploys it to GitHub Pages after changes are pushed to `main`.

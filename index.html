@@ -3,101 +3,157 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Anami Edu is a bright beginner learning site with basic math, English, Zulu, and typing games."
-    />
-    <title>Anami Edu</title>
+    <meta name="description" content="Northstar gives clients and advisers a clear, shared view of every investment portfolio." />
+    <title>Northstar | Portfolio overview</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <nav class="topbar" aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="Anami Edu home">Anami Edu</a>
-        <div class="nav-links">
-          <a href="#math">Math</a>
-          <a href="#english">English</a>
-          <a href="#zulu">Zulu</a>
-          <a href="#typing">Typing</a>
-        </div>
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="logo" href="#" aria-label="Northstar home"><span class="logo-mark">N</span><span>northstar</span></a>
+      <nav>
+        <p class="nav-label">Workspace</p>
+        <button class="nav-item active" data-section="Overview"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-section="Portfolio"><span>◫</span> Portfolio</button>
+        <button class="nav-item" data-section="Cash flow"><span>↗</span> Cash flow</button>
+        <button class="nav-item" data-section="Documents"><span>□</span> Documents</button>
+        <p class="nav-label">Account</p>
+        <button class="nav-item" data-section="Messages"><span>◇</span> Messages <b class="nav-badge">2</b></button>
+        <button class="nav-item" data-section="Settings"><span>⚙</span> Settings</button>
       </nav>
-
-      <section id="top" class="hero-content">
-        <p class="eyebrow">Play • Learn • Grow</p>
-        <h1>Welcome to Anami Edu</h1>
-        <p>
-          A cheerful learning playground with quick games for basic math,
-          English words, Zulu vocabulary, and typing practice.
-        </p>
-        <a class="button" href="#games">Start learning</a>
-      </section>
-    </header>
+      <div class="sidebar-help">
+        <span>?</span>
+        <div><strong>Need a hand?</strong><small>Your adviser is here to help.</small></div>
+        <button id="contact-adviser">Contact adviser</button>
+      </div>
+      <div class="user-card">
+        <div class="avatar">MN</div>
+        <div><strong>Maya Naidoo</strong><small>Client</small></div>
+        <button aria-label="Open account menu">•••</button>
+      </div>
+    </aside>
 
     <main>
-      <section class="intro" aria-labelledby="intro-title">
-        <h2 id="intro-title">Little lessons, big confidence</h2>
-        <p>
-          Each activity gives instant feedback and keeps score so learners can
-          practise independently in short, fun sessions.
-        </p>
-      </section>
+      <header class="topbar">
+        <button class="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="crumb"><span>Clients</span><b>/</b><strong>Maya Naidoo</strong></div>
+        <div class="top-actions">
+          <label class="role-select">Viewing as
+            <select id="role-switcher" aria-label="Select dashboard role">
+              <option value="client">Client</option>
+              <option value="broker">Broker</option>
+              <option value="management">Partner</option>
+              <option value="company">Company</option>
+            </select>
+          </label>
+          <button class="icon-button" id="notifications" aria-label="Notifications">♧<i></i></button>
+          <button class="primary-button" id="update-portfolio">Update portfolio</button>
+        </div>
+      </header>
 
-      <section id="games" class="games-grid" aria-label="Learning games">
-        <article id="math" class="card game-card">
-          <div class="card-icon" aria-hidden="true">➕</div>
-          <h2>Math Mission</h2>
-          <p>Solve the addition problem and earn a point for every correct answer.</p>
-          <div class="question" id="math-question">Loading question...</div>
-          <label for="math-answer">Your answer</label>
-          <div class="answer-row">
-            <input id="math-answer" inputmode="numeric" type="number" />
-            <button type="button" id="math-check">Check</button>
+      <div class="page-wrap">
+        <section class="welcome">
+          <div>
+            <p class="eyebrow">PORTFOLIO OVERVIEW</p>
+            <h1>Good morning, Maya.</h1>
+            <p>Here’s how your investments are performing across every platform.</p>
           </div>
-          <p class="feedback" id="math-feedback" role="status" aria-live="polite"></p>
-          <p class="score">Score: <span id="math-score">0</span></p>
-        </article>
+          <div class="report-date"><span>Last updated</span><strong>06 October 2026, 09:42</strong><button id="refresh-data">↻</button></div>
+        </section>
 
-        <article id="english" class="card game-card">
-          <div class="card-icon" aria-hidden="true">📚</div>
-          <h2>English Builder</h2>
-          <p>Pick the word that matches the picture clue.</p>
-          <div class="question" id="english-clue">Loading clue...</div>
-          <div class="choice-row" id="english-choices"></div>
-          <p class="feedback" id="english-feedback" role="status" aria-live="polite"></p>
-          <p class="score">Score: <span id="english-score">0</span></p>
-        </article>
+        <section class="stat-grid" aria-label="Portfolio summary">
+          <article class="stat-card featured">
+            <div class="stat-label"><span>Total portfolio value</span><button aria-label="Portfolio value information">i</button></div>
+            <strong class="stat-value" id="portfolio-total">R 1,400,197</strong>
+            <p><span class="gain">↗ 13.32%</span> <span>R164,622 this year</span></p>
+            <div class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label"><span>Period return</span><button aria-label="Period return information">i</button></div>
+            <strong class="stat-value">+0.30%</strong>
+            <p class="muted">06 Jul — 06 Oct 2026</p>
+            <div class="progress"><i style="width: 68%"></i></div>
+            <small>Tracking 0.08% above target</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label"><span>Monthly contributions</span><button aria-label="Contribution information">i</button></div>
+            <strong class="stat-value">R 10,000</strong>
+            <p class="muted">R120,000 contributed yearly</p>
+            <div class="contribution-note"><span>Next contribution</span><b>25 Oct</b></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-label"><span>Investment accounts</span><button aria-label="Account information">i</button></div>
+            <strong class="stat-value">6</strong>
+            <p class="muted">Across 4 providers</p>
+            <div class="provider-stack"><i>AG</i><i>OM</i><i>SA</i><i>+1</i></div>
+          </article>
+        </section>
 
-        <article id="zulu" class="card game-card">
-          <div class="card-icon" aria-hidden="true">🌍</div>
-          <h2>Zulu Words</h2>
-          <p>Learn useful isiZulu words by choosing the English meaning.</p>
-          <div class="question" id="zulu-word">Loading word...</div>
-          <div class="choice-row" id="zulu-choices"></div>
-          <p class="feedback" id="zulu-feedback" role="status" aria-live="polite"></p>
-          <p class="score">Score: <span id="zulu-score">0</span></p>
-        </article>
+        <section class="dashboard-grid">
+          <article class="panel performance-panel">
+            <div class="panel-head">
+              <div><h2>Portfolio performance</h2><p>Market value across all investments</p></div>
+              <div class="period-tabs" role="group" aria-label="Performance period">
+                <button data-period="1M">1M</button><button data-period="3M">3M</button><button data-period="6M">6M</button><button class="active" data-period="1Y">1Y</button><button data-period="ALL">All</button>
+              </div>
+            </div>
+            <div class="chart-summary"><div><span>Current value</span><strong>R1,400,197</strong></div><p><span class="gain">+R164,622</span> since Oct 2025</p></div>
+            <div class="line-chart" aria-label="Portfolio value increased from R1.24m to R1.4m over one year">
+              <div class="y-labels"><span>R1.4m</span><span>R1.3m</span><span>R1.2m</span><span>R1.1m</span></div>
+              <svg viewBox="0 0 760 205" preserveAspectRatio="none" role="img">
+                <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#167c64" stop-opacity=".25"/><stop offset="1" stop-color="#167c64" stop-opacity="0"/></linearGradient></defs>
+                <path class="chart-area" d="M0 173 C80 167 130 154 195 145 S310 118 380 103 S485 84 555 69 S670 47 760 24 L760 205 L0 205Z"/>
+                <path class="chart-line" d="M0 173 C80 167 130 154 195 145 S310 118 380 103 S485 84 555 69 S670 47 760 24"/>
+                <g class="chart-points"><circle cx="0" cy="173" r="5"/><circle cx="380" cy="103" r="5"/><circle cx="760" cy="24" r="6"/></g>
+              </svg>
+              <div class="x-labels"><span>Oct ’25</span><span>Jan ’26</span><span>Apr ’26</span><span>Jul ’26</span><span>Oct ’26</span></div>
+            </div>
+          </article>
 
-        <article id="typing" class="card game-card wide-card">
-          <div class="card-icon" aria-hidden="true">⌨️</div>
-          <h2>Typing Trail</h2>
-          <p>Copy the sentence exactly to practise careful typing.</p>
-          <div class="question typing-prompt" id="typing-prompt">Loading sentence...</div>
-          <label for="typing-input">Type here</label>
-          <textarea id="typing-input" rows="3" spellcheck="false"></textarea>
-          <div class="answer-row">
-            <button type="button" id="typing-check">Check typing</button>
-            <button type="button" id="typing-next" class="secondary">New sentence</button>
-          </div>
-          <p class="feedback" id="typing-feedback" role="status" aria-live="polite"></p>
-          <p class="score">Completed: <span id="typing-score">0</span></p>
-        </article>
-      </section>
+          <article class="panel allocation-panel">
+            <div class="panel-head"><div><h2>Asset allocation</h2><p>Your portfolio mix</p></div><button class="text-button">View detail →</button></div>
+            <div class="allocation-wrap">
+              <div class="donut"><div><strong>71.3%</strong><span>Equities</span></div></div>
+              <div class="legend">
+                <p><i class="navy"></i><span>Equities</span><b>71.31%</b></p>
+                <p><i class="green"></i><span>Bonds</span><b>19.75%</b></p>
+                <p><i class="blue"></i><span>Cash</span><b>5.26%</b></p>
+                <p><i class="gold"></i><span>Property</span><b>1.22%</b></p>
+                <p><i class="gray"></i><span>Other</span><b>2.46%</b></p>
+              </div>
+            </div>
+            <div class="allocation-footer"><span>Geographic exposure</span><strong>50% local <i></i> 50% offshore</strong></div>
+          </article>
+
+          <article class="panel accounts-panel">
+            <div class="panel-head"><div><h2>Your investments</h2><p>Accounts across all providers</p></div><button class="text-button">View all accounts →</button></div>
+            <div class="account-list">
+              <div class="account-row"><div class="account-icon purple">RA</div><div><strong>Retirement annuity</strong><span>Allan Gray · •••• 1842</span></div><div class="account-value"><strong>R374,895</strong><span class="gain">+8.4%</span></div><div class="bar"><i style="width:100%"></i></div></div>
+              <div class="account-row"><div class="account-icon teal">UT</div><div><strong>Unit trusts</strong><span>Stanlib · •••• 6119</span></div><div class="account-value"><strong>R372,697</strong><span class="gain">+16.1%</span></div><div class="bar"><i style="width:99%"></i></div></div>
+              <div class="account-row"><div class="account-icon blue">PP</div><div><strong>Pension preservation</strong><span>Old Mutual · •••• 7721</span></div><div class="account-value"><strong>R314,933</strong><span class="gain">+11.8%</span></div><div class="bar"><i style="width:84%"></i></div></div>
+              <div class="account-row"><div class="account-icon amber">EN</div><div><strong>Endowment</strong><span>Sanlam · •••• 2034</span></div><div class="account-value"><strong>R180,055</strong><span class="gain">+5.9%</span></div><div class="bar"><i style="width:48%"></i></div></div>
+            </div>
+          </article>
+
+          <article class="panel insights-panel">
+            <div class="panel-head"><div><h2>Insights for you</h2><p>Based on your portfolio</p></div><span class="new-badge">2 NEW</span></div>
+            <div class="insight success"><div class="insight-icon">↗</div><div><span>POSITIVE PROGRESS</span><h3>You’re R30,083 up this quarter</h3><p>Your portfolio grew 2.20% since July, staying ahead of your quarterly target.</p><button>See performance</button></div></div>
+            <div class="insight attention"><div class="insight-icon">◎</div><div><span>REVIEW SUGGESTION</span><h3>Check your equity exposure</h3><p>Equities make up 71.31% of your portfolio. Let’s confirm this still suits your goals.</p><button>Message Candice</button></div></div>
+          </article>
+        </section>
+        <footer><span>© 2026 Northstar Wealth</span><div><a href="#">Privacy</a><a href="#">Legal</a><a href="#">Support</a></div><span>Prepared by <strong>Candice Tarry Harvey</strong></span></footer>
+      </div>
     </main>
 
-    <footer>
-      <p>Made with love for curious learners. Keep practising every day!</p>
-    </footer>
-
+    <dialog id="update-dialog">
+      <form method="dialog" id="portfolio-form">
+        <div class="dialog-head"><div><p class="eyebrow">QUICK UPDATE</p><h2>Update portfolio value</h2></div><button value="cancel" aria-label="Close">×</button></div>
+        <p>Keep the client view current by recording the latest consolidated value.</p>
+        <label>Total portfolio value (ZAR)<input id="value-input" type="number" min="0" value="1400197" required /></label>
+        <label>Update note<textarea id="update-note" rows="3" placeholder="Add context for the client..."></textarea></label>
+        <div class="dialog-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="primary-button" value="default" id="save-update">Save update</button></div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"><span>✓</span><div><strong>Portfolio updated</strong><small>Your changes are now visible.</small></div></div>
     <script src="script.js"></script>
   </body>
 </html>
